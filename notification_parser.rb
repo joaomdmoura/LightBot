@@ -21,7 +21,7 @@ class NotificationParser
   private
 
   def parse_urls(repository, pull_request)
-    regex = /@top-lightbot run (.+) (.+)$/
+    regex = /@lightbot run (.+) (.+)$/
 
     comments = @client.issue_comments(repository, pull_request).reverse
     latest_comment = comments.select {|comment| regex.match(comment[:body]) }.last

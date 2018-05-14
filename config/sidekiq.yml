@@ -1,5 +1,5 @@
 :concurrency: 3
 :schedule:
   github_mention_worker:
-    cron: '*/5 * * * *'
+    cron: '*/4 * * * *'
     class: GithubMentionWorker
