@@ -14,7 +14,7 @@ class GithubMentionWorker
   def perform()
     client = Octokit::Client.new(:login => ENV['GH_USERNAME'], :password => ENV['GH_PASSWORD'])
     notifications = client.notifications.select {|notification| notification[:reason] == "mention"  }
-    # client.mark_notifications_as_read
+    client.mark_notifications_as_read
 
     notifications.each do |notification|
       notification_parser = NotificationParser.new(client, notification)
