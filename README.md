@@ -9,6 +9,8 @@ It's a tool that audits web pages check and rating performance, accessibility, a
 
 The main motivation of this library is to help people to perform quick comparisons between two URL performances within PRs, this might be helpful to check if the code of that PR increases or decreases overall perfomance when compared to production.
 
+![Image of LightBot](https://imgur.com/7iXEgjX.png)
+
 - [Setup](#setup)
 - [Starting LightBot](#starting-lightbot)
 - [Using it](#using-it)
@@ -22,6 +24,7 @@ The main motivation of this library is to help people to perform quick compariso
   - Ruby
   - Bundler
   - Redis
+  - Lighthouse (npm package)
 - Install gems with `bundle install`
 - Set two env variables `GH_USERNAME` and `GH_PASSWORD`
 - Make sure the Github user is watching the repositories you want.
