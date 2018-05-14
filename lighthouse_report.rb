@@ -12,7 +12,7 @@ class LighthouseReport
   end
 
   def generate()
-    audits = JSON.parse(`lighthouse --quiet --chrome-flags="--headless" --output=json #{@url}`)["audits"]
+    audits = JSON.parse(`lighthouse --quiet --chrome-flags="--headless --no-sandbox" --output=json #{@url}`)["audits"]
     
     report  = {}
     METRICS.each do |metric|
