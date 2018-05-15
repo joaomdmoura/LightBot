@@ -13,14 +13,14 @@ class LighthouseReport
 
   def generate()
     audits = JSON.parse(`lighthouse --quiet --chrome-flags="--headless --no-sandbox" --output=json #{@url}`)["audits"]
-    
+
     report  = {}
     METRICS.each do |metric|
       report[metric] = extract_score(audits, metric)
     end
-    
+
     report["url"] = @url
-    
+
     report
   end
 
