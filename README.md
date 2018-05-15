@@ -19,19 +19,18 @@ The main motivation of this library is to help people to perform quick compariso
 
 ## Setup
 
-- Clone this repository to an server
+- Clone this repository to a server
 - Install dependencies
   - Ruby
-  - Bundler
   - Redis
-  - Lighthouse (npm package)
+  - Rubygems & Lighthouse with `bash bin/setup`
 - Install gems with `bundle install`
 - Set two env variables `GH_USERNAME` and `GH_PASSWORD`
 - Make sure the Github user is watching the repositories you want.
 
 ## Starting LightBot
 
-Once everything is properly set all you need to do is to start `sideikiq` for the `\workers\*` folder.
+Once everything is properly set all you need to do is to start `sidekiq` for the `\workers\*` folder.
 You might want to start is a deamon. Make sure you run it within the main folder of the project.
 
 Example.
